@@ -13,6 +13,19 @@
             window.open(url)
         }
     </script>
+    <script>
+        console.log("网站内有乾坤彩蛋")
+        console.log("阳数")
+        var times = 0
+        function jumpInner()
+        {
+            times += 1
+            if(times == 5)
+            {
+                window.open("010 易校/首页.html")
+            }
+        }
+    </script>
     <link rel="stylesheet" href="css/dymatic_button.css">
     <style>
         .grid
@@ -38,33 +51,38 @@
         {
             text-decoration-line: underline;
         }
+        .center-container
+        {
+            background-color: orange;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .center-container > .textbox
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
     </style>
 </head>
 <body>
-    <h1 class="title">FreeLearnALL全人道自由民办共产网络免费学校</h1>
-<h2>欢迎来到FreeLearnAll自由学校,这里是一所幼儿园、小学、中学、大学为一体的自由学习网站</h2>
-<p>欢迎各位家长，老师自行在家里教育孩子，网站资料仅供参考，欢迎提供自主教学资料,欢迎各位学习投稿自己的笔记和书写的易学教材</p>
-<h2>办学宗旨</h2>
-<h2>在这里，自由学习，自由教育。你不需要为此考下教师资格证</h2>
-    <a href="010 易校/首页.html">易校</a>
-    <div class="grid">
-        <h2>学科：</h2>
-        <div class="grid-item"> 
-            <button  onclick="set_page('/学习区/002 地理学/江阴本地.txt')">地理学</button> 
-            <button  onclick="set_page('/学习区/002 技校区/003 电路学/index.html')">电路学</button>
-            <button  onclick="set_page('/学习区/002 技校区/001 网页设计/网页设计圣经.html')">网页设计</button>
+    <div class="app">
+        <h1 class="title" onclick="jumpInner()">FreeLearnALL全人道自由民办共产网络免费学校</h1>
+        <div class="center-container">
+            <div class="textbox">
+                <h2>欢迎来到FreeLearnAll自由学校,这里是一所幼儿园、小学、中学、大学为一体的自由学习网站</h2>
+                <p>欢迎各位家长，老师自行在家里教育孩子，网站资料仅供参考，欢迎提供自主教学资料,欢迎各位学习投稿自己的笔记和书写的易学教材</p>
+                <h2>办学宗旨</h2>
+                <p>在这里，自由学习，自由教育。你不需要为此考下教师资格证</p>
+            </div>
         </div>
-        <h2>校区</h2>
-        <div class="grid-item"> 
-            <button  onclick="set_page('https://www.youjiao.com/sejy/')">幼儿区</button>
-            <button  onclick="set_page('/学习区/100 宇宙学/001 12星座/index.html')">小学区</button>
-            <button  onclick="set_page('/学习区/FreeCAD 2022绘图基础/index.html')">技校区</button> 
-            <button  onclick="set_page('/学习区/004 大学区/index.html')">大学区</button>
-            <button  onclick="set_page('/学习区/004 大学区/index.html')">全人区</button>
-            <button  onclick="set_page('/学习区/100 宇宙学/001 12星座/index.html')">宇宙学区</button>
-            
-        </div>
+        
     </div>
+    
+    <footer>
+
     <h2>相关链接</h2>
     私人网站：<a href="https://www.zxxk.com/">学科网（综合网站）</a>
      <a href="https://www.21cnjy.com/">21世纪教育网</a>
@@ -76,8 +94,11 @@
        <a href="https://www.jse.edu.cn/">江苏智慧教育云平台</a> </li>
         <a href="https://www.jseea.cn/">江苏省教育考试院</a> </li>
      <a href="https://1s1k.eduyun.cn/portal/html/1s1k/course/1.html">国家教育资源公共服务平台</a> </li>
-
-    <p>投稿：请发送邮件到2439905184@qq.com</p>
+    
+        <p>投稿：请发送邮件到2439905184@qq.com</p>
+    <p><a href="https://github.com/2439905184/FreeLearnAll">github主页</a></p>
+    </footer>
+    
    
 </body>
 </html>
