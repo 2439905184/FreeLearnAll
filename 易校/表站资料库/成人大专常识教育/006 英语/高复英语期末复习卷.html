@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高复英语期末复习卷</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
+    <style>
+        .app
+        {
+            background-color: green;
+            height: 300px;
+        }
+        .root-wrapper
+        {
+            background-color: brown;
+            display: flex;
+            justify-content: center;
+        }
+        .web-paper
+        {
+            background-color: wheat;
+            width: 600px;
+            height: 400px;
+        }
+        /* 选择题通用css */
+        .xzt > li > div
+        {
+            display: inline-block;
+            border: solid 2px black;
+            width: 40px;
+        }
+        .xzt > li
+        {
+            margin-top: 13px;
+        } 
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+</head>
+<body>
+    <!-- todo 使用卷王系统 -->
+    <!-- https://gitee.com/surveyking/surveyking -->
+    <div class="app">
+        <!-- 正文 -->
+        <div class="root-wrapper">
+            <div class="web-paper">
+                <h2>高复英语期末试卷（20级）</h2>
+                <h2>一、单项选择</h2>
+                <small>请手动输入大写英文字母</small>
+                <ol class="xzt">
+                    <li class="question">The boy wore a suit <div contenteditable="true"></div> large for him.</li>
+                    <!-- <input type="checkbox" name="" id=""> -->
+                    <!-- for name 配对 -->
+                    <input type="radio" value="A" name="q1"><label for="q1">A. very much</label>
+                    <input type="radio" value="B" name="q1"><label for="q1">B. too much</label>
+                    <input type="radio" value="C" name="q1"><label for="q1">C. much too</label>
+                    <input type="radio" value="D" name="q1"><label for="q1">D. very many</label>
+
+                    <li class="question">Hold the mirror <div contenteditable="true"></div> please,for I can't see myself in it yet.</li>
+                    <span class="A">A. very much</span>
+                    <span class="B">B. too much </span> 
+                    <span class="C">C. much too</span> 
+                    <span class="D">D. very much</span>
+                </ol>
+                <h2>二、默写动词的正确形式</h2>
+                <div id="example"></div>
+                
+               
+                <button class="commit" oclick="submit()">提交试卷</button>
+                <div>批卷结果</div>
+                
+        <p>合作伙伴：广州读书郎电脑有限公司</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>const container = document.querySelector('#example');
+
+        const hot = new Handsontable(container, {
+          data: [
+            {name: 'beta', a:'', b:'', c:'', d:''},
+            {name: 'break',a:'', b:'', c:'', d:''},
+            {name: 'begin',a:'', b:'', c:'', d:''},
+            {name: 'buy',a:'', b:'', c:'', d:''},
+            {name: 'catch',a:'', b:'', c:'', d:''},
+            {name: 'fall',a:'', b:'', c:'', d:''},
+            {name: 'forget',a:'', b:'', c:'', d:''},
+            {name: 'know',a:'', b:'', c:'', d:''},
+            {name: 'lie',a:'', b:'', c:'', d:''},
+          ],
+        //   dataSchema: model,
+          rowHeaders: true,
+          colHeaders: true,
+          height: 'auto',
+          width: 'auto',
+          colHeaders: ['动词原形','动词三单','动词过去式','动词过去分词','动词现在分词'],
+          licenseKey: 'non-commercial-and-evaluation' // for non-commercial use only
+        });</script>
+    <script>
+        $(function()
+        {
+            $(".commit").click(function()
+            {
+                var question_list = $(".xzt > li")
+            })
+        })
+        // function submit()
+        // {
+
+        // }
+    </script>
+</body>
+</html>
+<!-- 
+     <table border="2px">
+        <tr>
+            <th>动词原形</th>
+            <th>动词三单</th>
+            <th>动词过去式</th>
+            <th>动词过去分词</th>
+            <th>动词现在分词</th>
+        </tr>
+        <tr>
+            <td>1. baet</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2. break</td>
+        </tr>
+        <tr>
+            <td>3. begin</td>
+        </tr>
+        <tr>
+            <td>4. buy</td>
+        </tr>
+        <tr>
+            <td>5. buy</td>
+        </tr>
+        <tr>
+            <td>6. fall</td>
+        </tr>
+        <tr>
+            <td>7. forget</td>
+        </tr>
+        <tr>
+            <td>8. know</td>
+        </tr>
+        <tr>
+            <td>
+                9. lie
+            </td>
+        </tr>
+    </table>
+ -->
