@@ -1,0 +1,37 @@
+<!-- 顶部组件 -->
+<div>
+    <span id="current_page">当前页码：</span>
+    <button onclick="priv()">前</button>
+    <button onclick="next()">后</button>
+    <input id="jump_page" type="text">
+    <button onclick="jumpto()">跳转到</button>
+</div>
+<img id="book" src="8.jpg" alt="" srcset="" width="50%">
+<script src=""></script>
+<!-- <script>
+    var index = 0
+    var book = document.getElementById("book")
+    var current_page = document.getElementById("current_page")
+    var jump_pager = document.getElementById("jump_page")
+    function priv()
+    {
+        index -= 1
+        book.src = index + ".jpg"
+        book.alt = "缺失书页"
+        current_page.innerText = "当前页码：" + index
+    }
+    function next()
+    {
+        index += 1
+        book.src = index + ".jpg"
+        book.alt = "缺失书页"
+        current_page.innerText = "当前页码：" + index
+    }
+    function jumpto()
+    {
+        index = jump_pager.value
+        book.src = index + ".jpg"
+        book.alt = "缺失书页"
+        current_page.innerText = "当前页码：" + index
+    }
+</script> -->
