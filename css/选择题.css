@@ -1,0 +1,9 @@
+.xzt-element-root
+{
+    list-style-type: upper-alpha;
+}
+/* 加点字 */
+.important
+{
+    text-emphasis: filled black;
+}

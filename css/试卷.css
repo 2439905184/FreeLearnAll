@@ -1,0 +1,25 @@
+/* 语文试卷或者通用试卷css */
+.paper
+{
+    /* border: solid 2px black; */
+}
+.paper > .page
+{
+    display: inline-block;
+    /* border: solid 2px black; */
+    vertical-align: text-top;
+    width: 18cm;
+    height: 26cm;
+}
+/* 文字段落 */
+.paragraph
+{
+    text-indent: 2em;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+/* 简答题 */
+.jdt
+{
+    border-bottom: solid 1px;
+}

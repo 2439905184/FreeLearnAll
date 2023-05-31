@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2020 年全国各类成人高考高起点 语文试卷</title>
+    <link rel="stylesheet" href="/FreeLearnAll/css/试卷.css">
+    <link rel="stylesheet" href="/FreeLearnAll/css/选择题.css">
+</head>
+<body>
+    <div id="bookCtrl">
+        <span id="pageLabel">当前页码：</span>
+        <button id="privButton">前</button>
+        <button id="nextButton">后</button>
+        <input id="pageInput" type="text">
+        <button id="jumpButton">跳转到</button>
+    </div>
+    <script>
+        var index = 1
+        var priv = document.getElementById("privButton")
+        var next = document.getElementById("nextButton")
+        var book = document.getElementsByClassName("paper")
+        var view = document.getElementById("pageLable")
+        next.onclick = function()
+        {
+            index +=1 
+            var url = index +".html"
+            const Http = new XMLHttpRequest()
+            Http.open("GET",url)
+            Http.send()
+            Http.onreadystatechange = function()
+            {
+                // console.log(Http.responseText)
+                // console.log(book.item(0))
+                book.item(0).innerHTML = Http.responseText
+                pageLabel.innerText = "当前页码：" + index
+                // book.innerHtml = Http.responseText
+            }
+        }
+        priv.onclick = function()
+        {
+            if(index >1)
+            {
+                index -=1
+                if(index == 1)
+                {
+                    var url = "index.html"
+                    window.open("index.html","_self")
+                }
+                else
+                {
+                    var url = index +".html"
+                    const Http = new XMLHttpRequest()
+                    Http.open("GET",url)
+                    Http.send()
+                    Http.onreadystatechange = function()
+                    {
+                        // console.log(Http.responseText)
+                        // console.log(book.item(0))
+                        book.item(0).innerHTML = Http.responseText
+                        // book.innerHtml = Http.responseText
+                    }
+                }
+                
+                pageLabel.innerText = "当前页码：" + index
+            }
+        }
+    </script>
+
+    <div class="paper">
+        <div class="page">
+            <h1 style="text-align:center">前言</h1>
+            <p class="paragraph">成人高等学校招生全国统一考试是为我国成人高等学校选拔合格的毕业生以进入更高层次学历教育的入学考试，可具体划分为高起专，专起本，专升本三个层次。近年来，随着我国成人教育事业的迅速发展，以及社会对人才要求的逐渐提高，越来越多的人加入了成人高考的行列。</p>
+            <p class="paragraph">为了迎合广大考生的备考需要，让考生对该类考试的出题形式及命题动向有清晰的认知，顺利地通过考试，本书研究组在认真研读考试大纲和仔细分析、对比近几年考试真题的基础上，集合奋战在成人高考教学辅导一线的名师，精心打早了本套试卷。</p>
+            <p class="paragraph">本套试卷有如下特点</p>
+            <b>真题练兵，洞悉考情</b>
+            <p class="paragraph">真题是对考试大纲要求的外在体现及对真实考试的再次还原，也是复习备考、熟悉考情的重要法宝。本套试卷的历年真题部分收录了近几年的考试真题，帮助考生提前洞悉和把握考试的考核特点、试题的难易程度和命题趋势。通过真题练兵、考生可以做到知己知彼，稳操胜券。</p>
+            <b>预测模拟，夯实基础</b>
+            <p class="paragraph">本套试卷包含的五套标准预测试卷和三套全真模拟试卷，是依据考试大纲及真题命题特点编制的，不管是题型、题量和考点分布，还是试题的难易程度，力求与真题保持一致。通过模拟演练，考生可以进行查漏补缺，从而夯实基础，提高应试能力。</p>
+            <b>解析透彻，答题无忧</b>
+            <p class="paragraph">本套试卷的答案和解析，均根据每道试题的特点编制而成。详细的解析有助于考生掌握每题的解题思路和作答规律，更加深刻地理解所考查的知识点，从而做到有备无患，解析有思路，作答心中有数。另外，相近的题型更是可以帮助考生做到触类旁通，不留遗漏，提高实战应变能力。</p>
+            <p class="paragraph">本套试卷中的不足、疏漏之处，敬请广大考生给予批评指正。</p>
+            <footer><h5>本书编写组</h5></footer>
+
+        </div>
+        <div class="page">
+            <h1 style="text-align:center">目录</h1>
+            <dl>
+                <dt><b>历年真题</b>......<button>1</button></dt>
+                <dd>2021年全国各类成人高考高起点语文试卷......<button>1</button></dd>
+                <dd>2020年全国各类成人高考高起点语文试卷......<button>4</button></dd>
+                <dd>2019年全国各类成人高考高起点语文试卷......<button>7</button></dd>
+                <dd>2018年全国各类成人高考高起点语文试卷......<button>10</button></dd>
+                <dd>2017年全国各类成人高考高起点语文试卷......<button>13</button></dd> 
+            </dl>
+            <dl>
+                <dt><b>标准预测</b>......<button>16</button></dt>
+                <dd>全国各类成人高考高起点语文标准预测试卷（一）......<button>16</button></dd>
+                <dd>全国各类成人高考高起点语文标准预测试卷（二）......<button>19</button></dd>
+                <dd>全国各类成人高考高起点语文标准预测试卷（三）......<button>22</button></dd>
+                <dd>全国各类成人高考高起点语文标准预测试卷（四）......<button>25</button></dd>
+                <dd>全国各类成人高考高起点语文标准预测试卷（五）......<button>28</button></dd> 
+            </dl>
+            <dl>
+                <dt><b>全真模拟</b>......<button>16</button></dt>
+                <dd>全国各类成人高考高起点语文标准预测试卷（一）......<button>31</button></dd>
+                <dd>全国各类成人高考高起点语文标准预测试卷（二）......<button>31</button></dd>
+                <dd>全国各类成人高考高起点语文标准预测试卷（三）......<button>34</button></dd>
+                <dd>全国各类成人高考高起点语文标准预测试卷（四）......<button>37</button></dd>
+            </dl>
+            <dl>
+                <dt><b>参考答案及解析......</b><button>40</button></dt>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>

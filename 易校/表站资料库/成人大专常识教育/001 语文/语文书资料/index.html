@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/FreeLearnAll/css/试卷.css">
+    <link rel="stylesheet" href="/FreeLearnAll/css/图片书页.css">
+</head>
+<body>
+    <div id="bookCtrl">
+        <span id="pageLabel">当前页码：</span>
+        <button id="privButton">前</button>
+        <button id="nextButton">后</button>
+        <input id="pageInput" type="text">
+        <button id="jumpButton">跳转到</button>
+    </div>
+    
+    <div class="paper">
+        <div class="page">
+            <img id="left" src="1.jpg" alt="缺页">
+        </div>
+        <div class="page">
+            <img id="right" src="2.jpg" alt="缺页">
+        </div>
+    </div>
+    <script>
+        var index = 1
+        var next = document.getElementById("nextButton")
+        var priv = document.getElementById("privButton")
+        var left = document.getElementById("left")
+        var right = document.getElementById("right")
+        
+        next.onclick = function()
+        {
+            index +=1
+            left.src = index + ".jpg"
+            right.src = index +1 +".jpg"
+        }
+        priv.onclick = function()
+        {
+            index -=1
+            left.src = index +".jpg"
+            right.src = index -1 +".jpg"
+        }
+    </script>
+</body>
+</html>
