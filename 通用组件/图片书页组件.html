@@ -1,0 +1,44 @@
+<!-- todo:vue合成 模板化 -->
+<style>
+    .paper > .page > img
+    {
+        width: 18cm;
+    }   
+    /* A4 */
+    .paper > .page
+    {
+        display: inline-block;
+        vertical-align: text-top;
+        width: 18cm;
+        height: 26cm;
+    }
+</style>
+
+<div id="bookCtrl">
+    <span id="pageLabel">当前页码：</span>
+    <button id="privButton">前</button>
+    <button id="nextButton">后</button>
+    <input id="pageInput" type="text">
+    <button id="jumpButton">跳转到</button>
+</div>
+
+<script>
+    var index = 1
+    var next = document.getElementById("nextButton")
+    var priv = document.getElementById("privButton")
+    var left = document.getElementById("left")
+    var right = document.getElementById("right")
+    
+    next.onclick = function()
+    {
+        index +=1
+        left.src = index + ".jpg"
+        right.src = index +1 +".jpg"
+    }
+    priv.onclick = function()
+    {
+        index -=1
+        left.src = index +".jpg"
+        right.src = index -1 +".jpg"
+    }
+</script>
